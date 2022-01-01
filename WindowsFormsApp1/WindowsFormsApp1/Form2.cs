@@ -15,8 +15,28 @@ namespace WindowsFormsApp1
         public Form2()
         {
             InitializeComponent();
-        }
 
+            
+        }
+        
+        public Form2(int userroot)
+        {
+            InitializeComponent();
+            int root = userroot;
+            
+            if (root == 2)
+            {
+                button2.Hide();
+                button3.Hide();
+                button5.Hide();
+            }
+            else
+            {
+                button2.Show();
+                button3.Show();
+                button5.Show();
+            }
+        }
         private void button4_Click(object sender, EventArgs e)
         {
             Form f1 = Application.OpenForms[0];
@@ -45,11 +65,6 @@ namespace WindowsFormsApp1
             this.Hide();
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            Form5 form5 = new Form5();
-            form5.Show();
-            this.Hide();
-        }
+        
     }
 }
